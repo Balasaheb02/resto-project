@@ -1,0 +1,25 @@
+.image {
+  background: #f7f7f7;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+}
+
+.category-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.category-main{
+    margin: 10px 30px;
+}
+
+.active{
+  background: rgba(251, 109, 58, 0.1);
+}
+
+.active-color{
+  color: #FB6D3A;
+}

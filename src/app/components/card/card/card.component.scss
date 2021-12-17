@@ -1,0 +1,55 @@
+.card-main {
+  width: 330px;
+  margin: 30px;
+  flex-wrap: wrap;
+  .resto-image {
+    border-radius: 16px;
+    width: 336px;
+    max-height: 176px;
+  }
+
+  .header {
+      padding-top: 16px;
+      padding-bottom: 12px;
+
+
+    .open-now-button {
+      background: rgba(80, 62, 157, 0.1);
+      border-radius: 4px;
+      height: 24px;
+      font-weight: 600;
+      min-width: 47px;
+      font-size: 11px;
+      line-height: 16px;
+      color: #503e9d;
+      border: none;
+    }
+
+    .close-now-button{
+      background: rgba(251, 109, 58, 0.1);
+      border-radius: 4px;
+      height: 24px;
+      font-weight: 600;
+      min-width: 47px;
+      font-size: 11px;
+      line-height: 16px;
+      color: #FB6D3A;
+      border: none;
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .details {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+  }
+}

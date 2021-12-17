@@ -1,0 +1,9 @@
+<div class="card-main clickable">
+    <img [src]="image" class="resto-image">
+    <div class="d-flex justify-content-between header">
+        <p class="title">{{title}}</p>
+        <button [class.open-now-button]="status === true" [class.close-now-button]="status === false" >{{status === true ? 'Open Now' : 'closed'}}</button>
+    </div>
+    <div class="details">{{description}}
+    </div>
+</div>

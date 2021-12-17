@@ -1,0 +1,17 @@
+<h2>Category</h2>
+<div class="d-flex">
+    <app-category *ngFor="let item of category" [title]="item.name" [image]="item.image"></app-category>
+</div>
+<h3>Restaurants</h3>
+<div class="cards-section">
+    <div class="container">
+        <app-card *ngFor="let restaurant of (restaurants$ | async)?.allRestaurants" [routerLink]="'/details/' + restaurant.id"
+            [image]="restaurant?.restaurantImage" [title]="restaurant?.restaurantName" [status]="restaurant?.isOpen"
+            [description]="restaurant?.restaurantDescription" ></app-card>
+    </div>
+</div>
+
+<div class="table-loader d-flex flex-column" *ngIf="(loadingService.loading$ | async)">
+    <mat-spinner strokeWidth="5" diameter="60"></mat-spinner>
+    <p class="P_t_sm no_result_text no_result_text">Loading Please wait ...</p>
+</div>

@@ -1,0 +1,42 @@
+<div class="detail-main" *ngIf="restaurantDetail">
+    <div class="detail-section d-flex justify-content-between align-items-center">
+        <div class="detail-left-section align-self-start">
+            <h1>{{restaurantDetail?.restaurantName}}</h1>
+            <p class="detail-text pr-14">{{restaurantDetail?.restaurantDescription}}</p>
+            <div class="detail-clock d-flex pt-5 detail-text">
+                <img src="../../assets/detail-clock.svg" width="24px" height="24px">
+                <p class="pl-14">{{restaurantDetail?.openingHours}}</p>
+            </div>
+            <div class="detail-phone d-flex detail-text">
+                <img src="../../assets/Phone.svg" width="24px" height="24px">
+                <p class="pl-14">{{restaurantDetail?.contactNumber}}</p>
+            </div>
+            <div class="detail-world d-flex detail-text">
+                <img src="../../assets/world.svg" width="24px" height="24px">
+                <p class="pl-14">{{restaurantDetail?.websiteUrl}}</p>
+            </div>
+        </div>
+        <div class="detail-main-image">
+            <img class="detail-image" [src]="restaurantDetail?.restaurantImage">
+        </div>
+    </div>
+    <div class="d-flex">
+        <app-chip [title]="'All'"></app-chip>
+        <app-chip [title]="'Baked (2)'"></app-chip>
+        <app-chip [title]="'Sweet (2)'"></app-chip>
+    </div>
+    <h2>Menu</h2>
+    <div class="cards-section">
+        <div class="container">
+            <div *ngFor="let item of (menu$ | async)?.menu">
+                <app-detail-card [image]="item?.itemPhoto" [title]="item?.itemName" [price]="item?.itemCost">
+                </app-detail-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table-loader d-flex flex-column" *ngIf="(loadingService.loading$ | async)">
+    <mat-spinner strokeWidth="5" diameter="60"></mat-spinner>
+    <p class="P_t_sm no_result_text no_result_text">Loading Please wait ...</p>
+</div>

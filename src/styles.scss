@@ -1,0 +1,209 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$pomo-and-co-primary: mat-palette($mat-indigo);
+$pomo-and-co-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$pomo-and-co-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$pomo-and-co-theme: mat-light-theme(
+  $pomo-and-co-primary,
+  $pomo-and-co-accent,
+  $pomo-and-co-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($pomo-and-co-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #182135;
+}
+
+p {
+  margin: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-start {
+  justify-content: start;
+}
+
+.justify-content-end {
+  justify-content: end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.pl-2 {
+  padding-left: 2px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.pl-4 {
+  padding-left: 4px;
+}
+
+.pl-14 {
+  padding-left: 14px;
+}
+
+.pr-2 {
+  padding-right: 2px;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pr-4 {
+  padding-right: 4px;
+}
+
+.pr-14 {
+  padding-right: 14px;
+}
+
+.pr-24 {
+  padding-right: 24px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-gray {
+  color: #626264;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.table-loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-button {
+  background: #503e9d;
+  border-radius: 10px;
+  min-height: 48px;
+  color: #f7fafc;
+  min-width: 170px;
+  margin-top: 48px;
+  font-size: 16px;
+  font-weight: bold;
+}

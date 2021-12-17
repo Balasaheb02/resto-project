@@ -1,0 +1,9 @@
+<div class="container-main d-flex">
+  <div class="sidebar" [ngStyle]="{'width':isSidebarOpened === false ? '13%' : '3%' }">
+    <app-sidebar [isSidebarOpened]="isSidebarOpened"></app-sidebar>
+  </div>
+  <div class="body-main">
+    <app-topbar (toggleButton)="toggleSidebar($event)" (filter)="openDialog($event)"></app-topbar>
+    <router-outlet></router-outlet>
+  </div>
+</div>
